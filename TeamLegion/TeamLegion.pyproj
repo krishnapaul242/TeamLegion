@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3d31ce0f-5b0d-4b28-ae96-cbad65b7bec1</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Web launcher</LaunchProvider>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+    <Name>TeamLegion</Name>
+    <RootNamespace>TeamLegion</RootNamespace>
+    <InterpreterId>MSBuild|legion|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="runserver.py" />
+    <Compile Include="TeamLegion\__init__.py" />
+    <Compile Include="TeamLegion\views.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TeamLegion\" />
+    <Folder Include="TeamLegion\static\" />
+    <Folder Include="TeamLegion\static\content\" />
+    <Folder Include="TeamLegion\static\fonts\" />
+    <Folder Include="TeamLegion\static\scripts\" />
+    <Folder Include="TeamLegion\templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="requirements.txt" />
+    <Content Include="TeamLegion\static\content\bootstrap.css" />
+    <Content Include="TeamLegion\static\content\bootstrap.min.css" />
+    <Content Include="TeamLegion\static\content\site.css" />
+    <Content Include="TeamLegion\static\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="TeamLegion\static\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="TeamLegion\static\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="TeamLegion\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="TeamLegion\static\scripts\bootstrap.js" />
+    <Content Include="TeamLegion\static\scripts\bootstrap.min.js" />
+    <Content Include="TeamLegion\static\scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="TeamLegion\static\scripts\jquery-1.10.2.js" />
+    <Content Include="TeamLegion\static\scripts\jquery-1.10.2.min.js" />
+    <Content Include="TeamLegion\static\scripts\jquery-1.10.2.min.map" />
+    <Content Include="TeamLegion\static\scripts\jquery.validate-vsdoc.js" />
+    <Content Include="TeamLegion\static\scripts\jquery.validate.js" />
+    <Content Include="TeamLegion\static\scripts\jquery.validate.min.js" />
+    <Content Include="TeamLegion\static\scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="TeamLegion\static\scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="TeamLegion\static\scripts\modernizr-2.6.2.js" />
+    <Content Include="TeamLegion\static\scripts\respond.js" />
+    <Content Include="TeamLegion\static\scripts\respond.min.js" />
+    <Content Include="TeamLegion\static\scripts\_references.js" />
+    <Content Include="TeamLegion\templates\about.html" />
+    <Content Include="TeamLegion\templates\contact.html" />
+    <Content Include="TeamLegion\templates\index.html" />
+    <Content Include="TeamLegion\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="legion\">
+      <Id>legion</Id>
+      <Version>3.7</Version>
+      <Description>legion (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
