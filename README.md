@@ -1,4 +1,4 @@
-# TeamLegion
+# COVID 19 Monitor
 
 Objective: It takes images of potential infectious place as inputs from the end-users and analyzes the
 number of people in that image. It takes covid19 status data available in online COVID related APIs.
