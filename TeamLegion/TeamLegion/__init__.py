@@ -8,7 +8,7 @@ import dns
 from pymongo import MongoClient
 
 app = Flask(__name__)
-client = MongoClient("mongodb+srv://krishna:ZNy5sDQvtDDdBWrf@team-legion-bn5kh.gcp.mongodb.net/test?retryWrites=true&w=majority")
+client = MongoClient(MONGO_URI)
 db = client.test
 
 import TeamLegion.views
